@@ -1,0 +1,57 @@
+# Outreach Dominator Global Rules
+
+## Projekt-Vision
+"Outreach Dominator" ist eine Gamification-basierte Web-App zur Bekämpfung von Prokrastination im Sales-Outreach. Ziel ist es, den täglichen Outreach durch visuelle Belohnungen und striktes Tracking zu motivieren.
+
+## Kern-Systeme
+
+### 1. Aktivitäten & Ziele
+- **Kanäle & Tagesziele**:
+  - 📞 Cold Calls: 50
+  - 📸 Instagram DMs: 50
+  - 💬 Facebook Nachrichten: 50
+  - **Total**: 150 Aktivitäten pro Tag
+- **Ergebnis-Tracking** (Pflicht für jede Aktivität):
+  - ✅ Termin gebucht (+100 XP)
+  - 🔄 Interesse
+  - ❌ Kein Interesse
+  - 📵 Nicht erreicht
+  - 📋 Follow-up nötig
+
+### 2. Gamification (XP & Levels)
+- **XP-System**:
+  - Log: +10 XP
+  - Tagesziel (Kanal): +50 XP
+  - Tagesziel (Alle): +200 XP
+  - 7-Tage-Streak: +500 XP
+- **Level 1-10**:
+  - Rookie (0 XP) bis Dominator Supreme (80.000 XP)
+- **Streaks**:
+  - Zählt nur wenn ALLE 150 Ziele erreicht wurden.
+  - Visuelle Flamme 🔥.
+
+### 3. UI/UX Design
+- **Stil**: Cyber/Tech/Futuristisch.
+- **Dark Mode** (Default): #0a0e17 Background, Neon Cyan/Magenta Akzente.
+- **Light Mode**: Clean, gedämpfte Neon-Farben.
+- **Glasmorphism**: Cards mit Blur-Effekt.
+- **Animationen**: Smooth Transitions, Confetti bei Zielen, Level-Up Effekte.
+
+## Technische Standards
+- **Datenspeicherung**: `localStorage`. Keine Fake-Daten.
+- **Datenstruktur**:
+  ```javascript
+  {
+    id: "uuid",
+    timestamp: "ISO-String",
+    channel: "call" | "instagram" | "facebook",
+    result: "termin" | "interesse" | "..."
+  }
+  ```
+- **Reset**: Neuer Tag um 00:00 Uhr lokal.
+
+## Qualitäts-Regeln
+- Schreibe NIEMALS Fake-Daten. Alles muss persistiert werden.
+- Jede Funktion muss vollständig sein.
+- Mobile-First Styling.
+- Sprache: Deutsch.

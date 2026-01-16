@@ -1,0 +1,140 @@
+.dashboard {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+
+/* Glass Panel Utility */
+.glassPanel {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+/* Level Bar */
+.levelBarContainer {
+    width: 100%;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.xpBarBg {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.xpBar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Channel Grid */
+.channelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.channelCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.channelCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+    border-color: var(--neon-cyan);
+}
+
+.channelIcon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.progressCircle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 16px;
+    background: radial-gradient(circle closest-side, var(--bg-dark) 79%, transparent 80% 100%),
+        conic-gradient(var(--channel-color) var(--progress), rgba(255, 255, 255, 0.1) 0);
+}
+
+.progressValue {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--channel-color);
+}
+
+.logBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--channel-color);
+    color: var(--channel-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: auto;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.logBtn:hover {
+    background: var(--channel-color);
+    color: #000;
+}
+
+/* Total Stats Area */
+.totalStats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.statCard {
+    text-align: center;
+}
+
+.statValue {
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Standard property for compatibility */
+    color: transparent;
+    /* Fallback */
+}

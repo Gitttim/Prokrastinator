@@ -1,0 +1,126 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal {
+    background: var(--bg-dark);
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.3s ease;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.header h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.optionBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.optionBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.optionBtn.selected {
+    border-color: var(--btn-color);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px var(--btn-color);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(90deg, var(--neon-cyan), #00aaff);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #333;
+    color: #666;
+}
+
+.submitBtn:not(:disabled):hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
