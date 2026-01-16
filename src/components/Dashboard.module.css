@@ -5,6 +5,12 @@
     color: var(--text-primary);
 }
 
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 16px;
+    }
+}
+
 /* Glass Panel Utility */
 .glassPanel {
     background: var(--bg-card);
@@ -16,12 +22,28 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+    .glassPanel {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
+
 /* Header Section */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
 }
 
 /* Level Bar */
@@ -32,6 +54,13 @@
     border-radius: 12px;
     padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .levelBarContainer {
+        margin-bottom: 24px;
+        padding: 12px;
+    }
 }
 
 .xpBarBg {
@@ -57,6 +86,14 @@
     margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+    .channelGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+}
+
 .channelCard {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -69,6 +106,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .channelCard {
+        padding: 20px;
+    }
+}
+
 .channelCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
@@ -78,6 +121,13 @@
 .channelIcon {
     font-size: 48px;
     margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .channelIcon {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
 }
 
 .progressCircle {
@@ -93,10 +143,23 @@
         conic-gradient(var(--channel-color) var(--progress), rgba(255, 255, 255, 0.1) 0);
 }
 
+@media (max-width: 768px) {
+    .progressCircle {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .progressValue {
     font-size: 24px;
     font-weight: bold;
     color: var(--channel-color);
+}
+
+@media (max-width: 768px) {
+    .progressValue {
+        font-size: 20px;
+    }
 }
 
 .logBtn {
@@ -109,6 +172,15 @@
     margin-top: auto;
     cursor: pointer;
     transition: background 0.2s ease;
+    min-height: 44px;
+    /* Touch-friendly */
+}
+
+@media (max-width: 768px) {
+    .logBtn {
+        padding: 12px 20px;
+        width: 100%;
+    }
 }
 
 .logBtn:hover {
@@ -117,6 +189,20 @@
 }
 
 /* Total Stats Area */
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
 .totalStats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -134,7 +220,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Standard property for compatibility */
     color: transparent;
-    /* Fallback */
+}
+
+@media (max-width: 768px) {
+    .statValue {
+        font-size: 24px;
+    }
 }

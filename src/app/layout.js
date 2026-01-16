@@ -2,6 +2,7 @@ import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from "./Layout.module.css";
 import { TrackerProvider } from "@/context/TrackerContext";
 
 const geistSans = Geist({
@@ -24,11 +25,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TrackerProvider>
-          <div style={{ display: 'flex' }}>
+          <div className={styles.layout}>
             <Sidebar />
-            <div style={{ flex: 1, marginLeft: '260px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+            <div className={styles.contentWrapper}>
               <Header />
-              <main style={{ padding: '32px', flex: 1 }}>
+              <main className={styles.main}>
                 {children}
               </main>
             </div>

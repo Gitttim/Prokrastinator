@@ -24,6 +24,13 @@
     animation: slideUp 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .modal {
+        padding: 20px;
+        width: 95%;
+    }
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -44,6 +51,11 @@
     color: var(--text-secondary);
     font-size: 20px;
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -65,6 +77,7 @@
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: left;
+    min-height: 44px;
 }
 
 .optionBtn:hover {
